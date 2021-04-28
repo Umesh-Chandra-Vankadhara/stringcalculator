@@ -22,4 +22,10 @@ public class TestCalculator {
         assertEquals(calculator.calculate("1"), 1);
     }
 
+    public void twoNumbersCommaDelimitedReturnSum() throws Exception {
+        assertEquals(calculator.calculate("1,2"), 3);
+    }
+
+
+
 }
