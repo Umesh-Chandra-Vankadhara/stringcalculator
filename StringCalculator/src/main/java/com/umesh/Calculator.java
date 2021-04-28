@@ -11,9 +11,17 @@ public class Calculator {
         if (input.length() == 1) {
             return stringToInteger(input);
         } else {
-            return stringToInteger(numbers[0]) + stringToInteger(numbers[1]);
+            return getSum(numbers);
         }
 
+    }
+
+    private int getSum(String[] numbers) {
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += stringToInteger(numbers[i]);
+        }
+        return sum;
     }
 
     private boolean isEmpty(String input) {

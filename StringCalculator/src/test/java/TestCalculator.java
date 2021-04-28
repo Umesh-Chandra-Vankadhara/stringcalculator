@@ -30,6 +30,9 @@ public class TestCalculator {
         assertEquals(calculator.calculate("1\n2"), 3);
     }
 
+    public void threeNumbersDelimitedBothwaysReturnSum() throws Exception {
+        assertEquals(calculator.calculate("1,2\n3"), 6);
+    }
 
 
 }
