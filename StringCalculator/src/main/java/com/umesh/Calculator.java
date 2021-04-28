@@ -17,9 +17,15 @@ public class Calculator {
     }
 
     private int getSum(String[] numbers) {
+
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += stringToInteger(numbers[i]);
+        for (String i : numbers) {
+            if (stringToInteger(i) < 0) {
+                throw new Exception("Negative input");
+            }
+        }
+        for (String i:numbers) {
+            sum += stringToInteger(i);
         }
         return sum;
     }

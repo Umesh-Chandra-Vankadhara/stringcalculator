@@ -34,5 +34,10 @@ public class TestCalculator {
         assertEquals(calculator.calculate("1,2\n3"), 6);
     }
 
+    @Test(expectedExceptions=Exception.class)
+    public void negativeInputReturnException() throws Exception {
+        calculator.calculate("-1");
+    }
+
 
 }
