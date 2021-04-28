@@ -2,7 +2,6 @@ package com.umesh;
 
 public class Calculator {
 
-
     public int calculate(String input) {
         String[] numbers = input.split(",|\n");
         if (isEmpty(input)) {
@@ -19,12 +18,10 @@ public class Calculator {
     private int getSum(String[] numbers) {
 
         int sum = 0;
-        for (String i : numbers) {
+        for (String i:numbers) {
             if (stringToInteger(i) < 0) {
                 throw new Exception("Negative input");
             }
-        }
-        for (String i:numbers) {
             sum += stringToInteger(i);
         }
         return sum;
