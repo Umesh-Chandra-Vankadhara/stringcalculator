@@ -1,18 +1,20 @@
 package com.umesh;
 
 public class Calculator {
-    public int calculate(String string) {
-        if (string.isEmpty()) {
+    public int calculate(String input) {
+        if (isEmpty(input)) {
             return 0;
-        } else {
-            return Integer.parseInt(string);
         }
+        return stringToInteger(input);
+    }
+
+    private boolean isEmpty(String input) {
+        return input.isEmpty();
+    }
+
+    private int stringToInteger(String input) {
+        return Integer.parseInt(input);
 
     }
+
 }
-
-
-
-
-
-
