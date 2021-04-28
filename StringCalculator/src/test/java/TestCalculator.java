@@ -26,6 +26,10 @@ public class TestCalculator {
         assertEquals(calculator.calculate("1,2"), 3);
     }
 
+    public void twoNumbersNewlineDelimitedReturnSum() throws Exception {
+        assertEquals(calculator.calculate("1\n2"), 3);
+    }
+
 
 
 }
